@@ -1,0 +1,36 @@
+Project Name: MapReduce Words Organizer
+
+Project Description: This project implements a MapReduce paradigm for text file
+    processing. It processes text files to organize words by their first letter
+    and outputs the results in separate files for each letter (a.txt, b.txt, ...,
+    z.txt). The implementation uses pthread for parallel processing, with mapper
+    and reducer threads coordinating to achieve efficient data organization.
+
+Project Functionalities:
+    1. MapReduce File Processing:
+
+    - Implements the MapReduce paradigm with mapper threads to process text files
+    and reducer threads to aggregate results..
+    - Efficiently handles large datasets by splitting tasks among threads.
+
+    2. Word Normalization:
+
+    - Converts all words to lowercase.
+    - Removes non-alphabetic characters to ensure uniformity.
+
+    3. Word Grouping by First Letter:
+
+    - Mapper threads groups words based on their starting letter.
+    - Reducer threads consolidate results into separate output
+    files (a.txt, b.txt, ..., z.txt).
+
+    4. Thread Synchronization:
+
+    - Ensures thread safety and coordination using mutexes and barriers.
+
+    5. Custom Output Format:
+
+    - Outputs words along with the file IDs where they appear.
+    - Format: <word>:[<file_id1> <file_id2> ...].
+
+
